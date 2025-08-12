@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL here](https://insure-landing-page-challenge.vercel.app/)
-- Live Site URL: [Live site URL here](https://insure-landing-page-challenge.vercel.app/)
+- Solution URL: [Solution URL here](https://news-homepage-solution-sepia.vercel.app/)
+- Live Site URL: [Live site URL here](https://news-homepage-solution-sepia.vercel.app/)
 
 ### Built with
 
