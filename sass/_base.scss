@@ -1,0 +1,74 @@
+//COLORS
+$color-soft-orange: hsl(35, 77%, 62%);
+$color-soft-red: hsl(5, 85%, 63%);
+
+$color-Off-white: hsl(36, 100%, 99%);
+$color-grayish-blue: hsl(233, 8%, 79%);
+$color-dark-grayish-blue: hsl(236, 13%, 42%);
+$color-very-dark-blue: hsl(240, 100%, 5%);
+
+//BREAKPOINTS
+$bp-desktop: 103.1em; //1650px
+$bp-large: 75em; //1200px
+$bp-medium: 62.9em; //1007px
+$bp-small: 48em; //768px
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 56.25%;
+  }
+  @media only screen and (min-width: $bp-desktop) {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: $color-dark-grayish-blue;
+  background-color: $color-Off-white;
+  padding: 0 3.2rem;
+}
+
+.container {
+  max-width: 130rem;
+  margin: 6rem auto;
+  display: grid;
+  grid-template-rows: 7rem repeat(2, min-content);
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 12rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: 7rem repeat(3, min-content);
+    gap: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns:
+      [full-start] minmax(2.4rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 2.4rem) [col-end]
+      )
+      [center-end] minmax(2.4rem, 1fr) [full-end];
+  }
+}

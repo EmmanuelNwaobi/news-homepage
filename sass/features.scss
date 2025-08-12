@@ -1,0 +1,54 @@
+.features {
+  // background-color: $color-soft-red;
+  grid-column: full-start / full-end;
+  margin: 4.8rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  align-items: self-end;
+  gap: 3.2rem;
+
+  &__box {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 2rem;
+    align-items: self-end;
+  }
+
+  &__image-box {
+    height: 15rem;
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    gap: 2rem;
+  }
+
+  &__number {
+    font-size: 3.2rem;
+    color: $color-soft-red;
+  }
+
+  &__heading {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: $color-very-dark-blue;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-soft-red;
+    }
+  }
+
+  &__text {
+    line-height: 1.5;
+  }
+}

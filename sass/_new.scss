@@ -1,0 +1,52 @@
+.new {
+  background-color: $color-very-dark-blue;
+  grid-column: col-start 7 / full-end;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    // grid-row: 3 / 4;
+    grid-column: full-start / full-end;
+  }
+
+  &__heading {
+    font-size: 3.2rem;
+    color: $color-soft-orange;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+
+    &:not(:last-child) {
+      padding-bottom: 3rem;
+      border-bottom: 1px solid $color-dark-grayish-blue;
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: $color-Off-white;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-soft-orange;
+    }
+  }
+
+  &__text {
+    font-size: 1.6;
+  }
+}
